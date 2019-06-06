@@ -1,5 +1,6 @@
 import piggy from '../porco.png'
 import React from 'react'
+import PorkFilter from './PorkFilter'
 
 const Nav = () => {
 	return (
@@ -11,6 +12,8 @@ const Nav = () => {
 				</a>
 			</div>
 			<span className="normalText">A React App for County Fair Hog Fans</span>
+
+			<PorkFilter />
 		</div>
 	)
 }

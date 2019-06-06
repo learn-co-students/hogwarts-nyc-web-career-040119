@@ -2,9 +2,20 @@
 
 ## React Week 1 Project
 
-## Project goals:
+## Project goals/Deliverables:
 
 * create an index displaying all hog tiles
+  - we have access to `./src/porkers_data.js`
+
+  **MVP Outline**
+  - App
+    - Nav
+      - PorkFilter
+    - PorkContainer
+      - PorkCard
+        - Random photos from `./src/hog-imgs`
+        - Hide function
+
 * render each hog name and picture in a tile
 * show the hog's details upon a user's click
 * allow users to sort the hogs based on name and weight and filter the hogs that are greased
