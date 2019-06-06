@@ -9,15 +9,24 @@ class PorkSortFilter extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <select onChange={this.handleChange}>
-            <option value="all">All</option>
-            <option value="name">Name</option>
-            <option value="weight">Weight</option>
-          </select>
+        <form className="ui form">
+          <div className="field">
+            <label>Sort</label>
+            <select
+              className="ui dropdown"
+              onChange={this.handleChange}>
+              <option value="all">All</option>
+              <option value="name">Name</option>
+              <option value="weight">Weight</option>
+            </select>
+          </div>
         </form>
 
-        <button onClick={this.props.greasyHogs}>{this.props.filtered ? "Ungreazzze it" : "Greasy Piggies"}</button>
+        <button
+          className={this.props.filtered ? "ui red button" : "ui blue button"}
+          onClick={this.props.greasyHogs}>
+          {this.props.filtered ? "Ungreazzze it" : "Greasy Piggies"}
+        </button>
       </div>
     )
   }

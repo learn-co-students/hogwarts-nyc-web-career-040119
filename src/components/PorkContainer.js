@@ -11,13 +11,19 @@ class PorkContainer extends React.Component {
     })
 
     return (
-      <div>
-        <PorkSortFilter
-          sortHogs={this.props.sortHogs}
-          filtered={this.props.filtered}
-          greasyHogs={this.props.greasyHogs} />
-        Hello from PorkContainer
-        {porkCards}
+      <div className="ui grid">
+        <div className="row">
+          <PorkSortFilter
+            sortHogs={this.props.sortHogs}
+            filtered={this.props.filtered}
+            greasyHogs={this.props.greasyHogs} />
+        </div>
+
+        <div className="row">
+          <div className="ui grid">
+            {porkCards}
+          </div>
+        </div>
       </div>
     )
   }
