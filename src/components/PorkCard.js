@@ -26,6 +26,8 @@ class PorkCard extends React.Component {
           {this.state.showDetails ? <div>
             <li>Specialty: {this.props.hog.specialty}</li>
             <li>Greased: {this.props.hog.greased ? "Greeeeezy" : "Meh"}</li>
+            <li>Weight in Refrigerators: {this.props.hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']}</li>
+            <li>Highest Medal Achieved: {this.props.hog['highest medal achieved']}</li>
           </div> : null}
 
           <hr />
