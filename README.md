@@ -4,21 +4,20 @@
 
 ## Project goals/Deliverables:
 
-* create an index displaying all hog tiles
+**MVP Outline**
+- App
   - we have access to `./src/porkers_data.js`
+  - Nav
+  -   PorkFilter
+  - PorkContainer
+    - PorkCard
+      - Random photos from `./src/hog-imgs`
+      - `longerWord.split(" ").join("_").toLowerCase()`
+      - Hide function
 
-  **MVP Outline**
-  - App
-    - Nav
-      - PorkFilter
-    - PorkContainer
-      - PorkCard
-        - Random photos from `./src/hog-imgs`
-          <!-- longerWord.split(" ").join("_").toLowerCase() -->
-        - Hide function
-
-* render each hog name and picture in a tile
-* show the hog's details upon a user's click
+<!-- * create an index displaying all hog tiles -->
+<!-- * render each hog name and picture in a tile -->
+<!-- * show the hog's details upon a user's click -->
 * allow users to sort the hogs based on name and weight and filter the hogs that are greased
 
 * BONUS: allow users to hide hogs (not delete them, just hide them from view!)
