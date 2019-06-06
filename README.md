@@ -14,6 +14,7 @@
     - PorkContainer
       - PorkCard
         - Random photos from `./src/hog-imgs`
+          <!-- longerWord.split(" ").join("_").toLowerCase() -->
         - Hide function
 
 * render each hog name and picture in a tile
