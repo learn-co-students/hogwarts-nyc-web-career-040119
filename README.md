@@ -20,7 +20,7 @@
 <!-- * create an index displaying all hog tiles -->
 <!-- * render each hog name and picture in a tile -->
 <!-- * show the hog's details upon a user's click -->
-* allow users to:
+<!-- * allow users to:
   - sort the hogs based on name and weight
     - select menu - no button, automatic selection filter
       - option value as identifier and should match the name of the state we want
@@ -28,7 +28,7 @@
       - do it in App, state={sortBy}
       - function that handles the setState for sortBy
 
-  - and filter the hogs that are greased
+  - and filter the hogs that are greased -->
 
 * BONUS: allow users to hide hogs (not delete them, just hide them from view!)
 * BONUS: bring in pig gifs from an API

@@ -3,6 +3,9 @@ import React from "react"
 // import PorkFilter from "./PorkFilter"
 
 class PorkSortFilter extends React.Component {
+  handleChange = (event) => {
+    this.props.sortHogs(event.target.value)
+  }
   render() {
     return (
       <div>

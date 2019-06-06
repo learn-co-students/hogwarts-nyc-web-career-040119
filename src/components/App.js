@@ -6,6 +6,7 @@ import PorkContainer from './PorkContainer'
 
 class App extends Component {
   state = {
+    sortBy: '',
     hogs: hogs,
     filtered: false
   } // end state
@@ -32,16 +33,42 @@ class App extends Component {
       default:
         this.setState({
           sortBy: porkSelectOption
-        }, () => console.log('sortHogs changing state:', this.state))
+        }, () => this.rerenderSortPigs(porkSelectOption))
         break
     }
   } // end sortHogs
+
+  rerenderSortPigs = (currentSortByState) => {
+    switch (this.state.sortBy){
+      case ('all'):
+        this.setState({
+          hogs: [...hogs]
+        })
+        break
+      case ('name'):
+        const nameHogs = this.state.hogs.sort((a, b) => a.name.localeCompare(b.name))
+
+        this.setState({
+          hogs: [...nameHogs]
+        })
+        break
+      case ('weight'):
+        const weightHogs = this.state.hogs.sort((a, b) => {
+          return a['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'] - b['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']
+        })
+        this.setState({
+          hogs: [...weightHogs]
+        })
+        break
+    }
+  }
 
   render() {
     return (
       <div className="App">
         <Nav />
         <PorkContainer
+          sortHogs={this.sortHogs}
           greasyHogs={this.greasyHogs}
           filtered={this.state.filtered}
           hogs={this.state.hogs} />

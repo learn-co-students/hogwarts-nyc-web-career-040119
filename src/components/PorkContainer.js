@@ -13,6 +13,7 @@ class PorkContainer extends React.Component {
     return (
       <div>
         <PorkSortFilter
+          sortHogs={this.props.sortHogs}
           filtered={this.props.filtered}
           greasyHogs={this.props.greasyHogs} />
         Hello from PorkContainer
