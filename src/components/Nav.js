@@ -1,6 +1,6 @@
 import piggy from '../porco.png'
 import React from 'react'
-import PorkSortFilter from './PorkSortFilter'
+// import PorkSortFilter from './PorkSortFilter'
 
 class Nav extends React.Component {
 	render() {
@@ -13,8 +13,6 @@ class Nav extends React.Component {
 					</a>
 				</div>
 				<span className="normalText">A React App for County Fair Hog Fans</span>
-
-				<PorkSortFilter sortHogs={this.props.sortHogs} />
 			</div>
 		)
 	}

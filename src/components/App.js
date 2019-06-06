@@ -6,32 +6,45 @@ import PorkContainer from './PorkContainer'
 
 class App extends Component {
   state = {
-    sortBy: 'all'
-  }
+    hogs: hogs,
+    filtered: false
+  } // end state
+
+  // ternery if greased or not then render that version here
+  greasyHogs = () => {
+    if (this.state.filtered) {
+      this.setState({
+        hogs: [...hogs],
+        filtered: false
+      })
+    } else {
+      const newHogs = [...this.state.hogs]
+      let filteredHogs = newHogs.filter(hog => hog.greased !== false)
+      this.setState({
+        hogs: [...filteredHogs],
+        filtered: true
+      })
+    }
+  } // end greasyHogs
 
   sortHogs = (porkSelectOption) => {
     switch (porkSelectOption){
       default:
         this.setState({
-          sortBy: 'all'
-        }, () => console.log('sortHogs default state:', this.state))
-        break
-      case ('name and weight'):
-        this.setState({
           sortBy: porkSelectOption
-        }, () => console.log('sortHogs name and weight state:', this.state))
+        }, () => console.log('sortHogs changing state:', this.state))
         break
     }
-  }
-
-  // come back to this
-  hogs = this.state.sortBy === 'all' ? hogs : hogs.sort(hog => hog.name[0].sort(hogWeight => hogWeight['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']))
+  } // end sortHogs
 
   render() {
     return (
       <div className="App">
-        <Nav sortHogs={this.sortHogs} />
-        <PorkContainer hogs={hogs} />
+        <Nav />
+        <PorkContainer
+          greasyHogs={this.greasyHogs}
+          filtered={this.state.filtered}
+          hogs={this.state.hogs} />
       </div>
     )
   }

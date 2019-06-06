@@ -1,5 +1,6 @@
 import React from "react"
 import PorkCard from "./PorkCard"
+import PorkSortFilter from './PorkSortFilter'
 
 class PorkContainer extends React.Component {
   render() {
@@ -11,6 +12,9 @@ class PorkContainer extends React.Component {
 
     return (
       <div>
+        <PorkSortFilter
+          filtered={this.props.filtered}
+          greasyHogs={this.props.greasyHogs} />
         Hello from PorkContainer
         {porkCards}
       </div>
