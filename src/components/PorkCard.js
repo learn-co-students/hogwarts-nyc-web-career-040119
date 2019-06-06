@@ -39,6 +39,7 @@ class PorkCard extends React.Component {
       !this.state.hide ?
         <div
           id={this.props.hog.name}
+          style={{margin: '1em auto'}}
           className="ui card"
           onClick={this.handleClick} >
 
@@ -50,12 +51,10 @@ class PorkCard extends React.Component {
             <div className="header">{this.props.hog.name}</div>
             {showDetails}
           </div>
-          <div className="extra content">
-            <button
-              onClick={this.handleHideClick}
-              className="ui red button">
-              Hide
-            </button>
+          <div
+            onClick={this.handleHideClick}
+            className="ui red bottom attached button">
+            Hide
           </div>
         </div>
       :
